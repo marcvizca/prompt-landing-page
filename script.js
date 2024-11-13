@@ -5,7 +5,7 @@ document.getElementById("subscribeForm").addEventListener("submit", function(eve
     const responseMessage = document.getElementById("responseMessage");
 
     // Realiza la solicitud POST al endpoint de Google Apps Script
-    fetch("https://script.google.com/macros/s/AKfycbyVJCFzknOnYyRYI8X8K_r-n9IaGwCBwD0SGgeo1B9ZayFSS-olUD5oB-dUYr15mQkk/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyIjW8QKzdQNJ6A8rWgTCU8dy0MCn7_0zFzTE7Vbzh15gpABkd6X1Oi-JMwFSmUOl48yw/exec", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email })
