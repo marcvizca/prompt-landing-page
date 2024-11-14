@@ -21,6 +21,7 @@ document.getElementById("subscribeForm").addEventListener("submit", function(eve
         }
     })
     .catch(error => {
+        console.log("ERROR AQUI:", error);
         responseMessage.textContent = "Error de red. Intenta más tarde.";
         responseMessage.style.color = "red";
         console.error("Error:", error);
