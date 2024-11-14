@@ -5,12 +5,13 @@ document.getElementById("subscribeForm").addEventListener("submit", function(eve
     const responseMessage = document.getElementById("responseMessage");
 
     // Realiza la solicitud POST al endpoint de Google Apps Script
-    fetch("https://script.google.com/macros/s/AKfycbxUguhUYhl8t34aMZp_L_wk2jPTfsMnHSg2fufjjTBB9oyNFhX7r-YTORHpz-ha1DU3iQ/exec?email=" + encodeURIComponent(email), {
+    fetch("https://script.google.com/macros/s/AKfycbyNZIj_SS39lSHdRFGQNNzb8vwCTNLG3WzPYTuGi6-fnOefVW9Xg4vkwJJFS6KAoL-nVg/exec?email=" + encodeURIComponent(email), {
         method: "GET",
     })
-    .then(response => {
-        console.log(response);
-        if (response.ok) {
+    .then(response => response.text())
+    .then(text => {
+        console.log(text);
+        if (text.includes("success") {
             responseMessage.textContent = "¡Gracias por suscribirte!";
             responseMessage.style.color = "green";
             event.target.reset();  // Limpia el formulario
