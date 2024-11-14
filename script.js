@@ -11,7 +11,7 @@ document.getElementById("subscribeForm").addEventListener("submit", function(eve
     .then(response => response.text())
     .then(text => {
         console.log(text);
-        if (text.includes("success") {
+        if (text.includes("success")) {
             responseMessage.textContent = "¡Gracias por suscribirte!";
             responseMessage.style.color = "green";
             event.target.reset();  // Limpia el formulario
